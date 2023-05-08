@@ -1,0 +1,961 @@
+// Custom styles
+@import "variables";
+
+// Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Archivo Narrow";
+}
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    main {
+        flex: 1;
+    }
+}
+h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 85px;
+    color: $dark;
+}
+h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 65px;
+    line-height: 66px;
+    text-transform: uppercase;
+    color: $dark;
+    margin: 20px 0 30px;
+}
+h4 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+    text-transform: uppercase;
+    color: $dark;
+    margin: 20px 0;
+}
+h5 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: $dark;
+    margin: 20px 0;
+}
+h6 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    margin: 0;
+}
+p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: $gray2;
+}
+
+// Optional class
+.header__content__space {
+    margin: 71px auto;
+}
+.social__network {
+    display: inline-block;
+    border: 1px solid $orange1;
+    border-radius: 50%;
+    padding: 12px 15px;
+}
+.your__opinion__box {
+    padding: 30px;
+    background-image: url("/image/fon/Background.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.btn__orange {
+    @include button;
+    color: $white;
+    background-color: $orange1;
+    border: 1px solid $orange1;
+    &:hover {
+        background-color: $white;
+        border: 1px solid $orange1;
+        color: $orange1;
+    }
+}
+.btn__bg__blue {
+    @include button;
+    color: $white;
+    background-color: $blue;
+    border: 1px solid $blue;
+    &:hover {
+        background-color: $white;
+        border: 1px solid $blue;
+        color: $blue;
+    }
+}
+.btn__blue {
+    @include button;
+    color: $blue;
+    background-color: $white;
+    border: 1px solid $blue;
+    &:hover {
+        background-color: $blue;
+        border: 1px solid $blue;
+        color: $white;
+    }
+}
+.btn__text {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: $orange1;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+}
+.search__btn {
+    background-color: $blue;
+    border: 1px solid $blue;
+    height: 50px;
+    padding: 0 14px;
+    margin-right: 21px;
+    color: $white;
+}
+.btn__outline {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 34px;
+    text-transform: uppercase;
+    color: $dark;
+    height: 50px;
+    min-width: 65px;
+    padding: 0 20px;
+    border: 1px solid $gray1;
+    background-color: $white;
+    transition: all 0.3s linear;
+    &:hover {
+        background-color: $blue;
+        color: $white;
+    }
+    &:focus {
+        background-color: $blue;
+        color: $white;
+    }
+    h6 {
+        color: $gray3;
+    }
+}
+.category {
+    color: $white;
+    background-color: $blue;
+    padding: 8px 20px;
+    border: 1px solid $blue;
+    font-size: 15px;
+    line-height: 22px;
+}
+.line {
+    @include line-before;
+}
+.hr {
+    @include hr;
+}
+.days__hms__dark {
+    @include days-hms;
+}
+.days__hms__blue {
+    @include days-hms($blue);
+}
+.description__subtitle {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: $gray2;
+}
+.input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid $gray1;
+    margin-bottom: 30px;
+    outline-color: $blue;
+}
+.subtitle {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $gray3;
+}
+.section {
+    margin: 120px auto;
+}
+.section-padding {
+    padding: 120px 0;
+}
+.line-before__text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    span {
+        @include line-before($blue);
+    }
+    h6 {
+        color: $blue;
+    }
+}
+.line-before__text__orange {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    span {
+        @include line-before($orange1);
+    }
+    h6 {
+        color: $orange1;
+    }
+}
+.breadcrumbs {
+    display: flex;
+    gap: 32px;
+    .line {
+        margin-top: 13px;
+        @include line-before($gray3);
+    }
+    strong {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: $dark;
+    }
+    b {
+        color: $blue;
+    }
+    p {
+        margin-top: 20px;
+    }
+}
+.line-before__description__white {
+    display: flex;
+    gap: 32px;
+    .line {
+        margin-top: 13px;
+        @include line-before($gray3);
+    }
+    p {
+        color: $gray2;
+    }
+}
+.light__square {
+    display: inline-block;
+    min-width: 78px;
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $light;
+    border: 1px solid $gray1;
+}
+.number__section__statistics {
+    @include statistics;
+    min-width: 270px;
+}
+
+// Navbar***
+.navbar {
+    margin-bottom: 40px;
+
+    .nav-link {
+        color: $white;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: uppercase;
+        &:hover {
+            border-bottom: 2px solid $white;
+            padding-bottom: 6px;
+        }
+        &:focus {
+            color: $white;
+            border-bottom: 2px solid $white;
+            padding-bottom: 6px;
+        }
+    }
+}
+.navbar__dark {
+    .navbar-toggler:focus {
+        box-shadow: 0 0 2px 3px $white;
+    }
+}
+.navbar__white {
+    .nav-link {
+        color: $dark;
+        &:hover {
+            border-bottom: 2px solid $blue;
+            padding-bottom: 6px;
+        }
+        &:focus {
+            color: $dark;
+            border-bottom: 2px solid $blue;
+            padding-bottom: 6px;
+        }
+        span {
+            color: $blue;
+        }
+    }
+}
+
+// SECTION
+
+// Home 1 page header***
+.background__img__home-1 {
+    @include bg-img(
+        url("/image//fon/passionate-mature-man-giving-speech-at-podium-2021-09-24-04-13-57-utc.jpg"),
+        100vh
+    );
+    .hr {
+        @include hr($gray2);
+    }
+}
+.home-header__title {
+    span {
+        display: inline-block;
+        width: 78px;
+        height: 9px;
+        background-color: $white;
+        vertical-align: middle;
+    }
+    b {
+        color: $orange1;
+    }
+}
+
+// Home 2 page header
+.background__img__home-2 {
+    @include bg-img(url("/image/fon/home-2.jpg"), 100vh);
+    .search__btn {
+        background-color: $white;
+        color: $blue;
+    }
+    h1 {
+        font-size: 120px;
+        line-height: 110px;
+    }
+    @media screen and (max-width: 1200px) {
+        h1 {
+            font-size: 100px;
+            line-height: 90px;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        h1 {
+            font-size: 70px;
+            line-height: 60px;
+        }
+    }
+    @media screen and (max-width: 576px) {
+        h1 {
+            font-size: 50px;
+            line-height: 50px;
+        }
+    }
+}
+
+// Vedio section***
+.vedio__section {
+    padding: 71px 0;
+}
+
+// Change section***
+.change-section__card {
+    padding: 34px 42px 31px 30px;
+}
+
+// News section***
+.news-section__info {
+    p {
+        color: $gray3;
+        margin-bottom: 8px;
+    }
+    .hr {
+        margin: 40px 0;
+    }
+}
+.news__date {
+    color: $gray3;
+    margin: 19px 0 0;
+}
+
+// Statistics section***
+.statistics__section {
+    @include statistics($dark, $gray3, 80px, 85px);
+}
+
+// Single post info page***
+.single__post__info {
+    max-width: 860px;
+    padding: 0 12px;
+    margin: 50px auto 120px;
+    .rectangle__outline {
+        @include rectangle(5px, 5px);
+    }
+    .rectangle {
+        @include rectangle(7px, 7px, $orange1, $orange1);
+    }
+    .btn__outline {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 20px;
+        color: $gray2;
+        text-transform: none;
+        &:hover {
+            color: $white;
+        }
+    }
+    .description__subtitle {
+        color: $gray3;
+    }
+}
+
+// News page***
+.news__menu {
+    padding: 33px 30px;
+    .title {
+        color: $blue;
+        margin-bottom: 17px;
+    }
+    .rectangle {
+        @include rectangle(5px, 5px);
+    }
+    li {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 20px;
+        color: $dark;
+        margin-bottom: 14px;
+    }
+    .description__subtitle {
+        color: $gray3;
+    }
+    .btn__outline {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 20px;
+        color: $gray2;
+        text-transform: none;
+        &:hover {
+            color: $white;
+        }
+    }
+}
+
+// Latest News section***
+.latest__news__section__box {
+    max-width: 408px;
+    position: relative;
+    .category {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+    }
+    .rectangle {
+        @include rectangle(5px, 5px);
+    }
+}
+
+// Social Sciences section***
+.social__sciences__section__bg {
+    @include bg-img(url("/image/fon/social.png"));
+    padding: 144px 0;
+}
+
+// Welcome Event section***
+.welcome__event__section {
+    @include bg-img(url("/image/fon/welcome.jpg"));
+    padding: 360px 30px 30px 0;
+}
+.welcome__event__section__details {
+    h6 {
+        width: 110px;
+    }
+}
+
+// Agenda And Schedule section***
+.agend__and__schedule__section__bg-box {
+    background-color: $orange1;
+    h5 {
+        color: $white;
+        font-size: 25px;
+        line-height: 34px;
+    }
+}
+.agend__and__schedule__section-color-gray {
+    color: $gray3;
+}
+
+// Conference on Future***
+.conference__future__bg {
+    @include bg-img(url("/image/fon/conference.jpg"));
+    padding: 144px 0;
+}
+.conference__future__button {
+    margin: 60px auto 120px;
+}
+
+// Event section***
+.events__block {
+    h6 {
+        color: $orange1;
+    }
+}
+.events__section__active {
+    background-color: $blue;
+    h6 {
+        color: $light;
+    }
+    h5 {
+        color: $white;
+    }
+    p {
+        color: $light;
+    }
+    .line {
+        background-color: $light;
+    }
+    .btn {
+        background-color: $orange1;
+        color: $white;
+        &:hover {
+            background-color: $white;
+            border-color: $orange1;
+            color: $orange1;
+        }
+    }
+}
+
+// More about section***
+.year__section {
+    background-color: $light;
+    padding: 118px 0 77px;
+    .year {
+        height: 1px;
+        background-color: $orange1;
+        position: relative;
+    }
+    .span {
+        @include rectangle;
+        position: absolute;
+        top: -5px;
+    }
+    h5 {
+        position: absolute;
+        top: -60px;
+    }
+    .year__2000 {
+        left: 10%;
+    }
+    .year__2005 {
+        left: 26%;
+    }
+    .year__2010 {
+        left: 45%;
+    }
+    .year__2015 {
+        left: 60%;
+        background-color: $orange1;
+    }
+    .year__2022 {
+        left: 77%;
+    }
+}
+.more__about__section__block {
+    margin: 60px 0 0;
+
+    .rectangle {
+        @include rectangle(7px, 7px, $blue, $blue);
+    }
+}
+
+// About Mayke section***
+.about__mayke__section {
+    height: 882px;
+}
+
+// Plan public safety***
+.plan__public__safety {
+    li h6 {
+        text-transform: none;
+    }
+}
+
+// Team person section***
+.team__person__section {
+    p {
+        margin: 30px 0 10px;
+        color: $orange1;
+    }
+}
+
+// Our mission***
+.our__section__bg {
+    min-height: 800px;
+    @include bg-img(url("/image/fon/grateful-candidate-holding-hand-on-chest-while-sta-2023-01-30-23-53-46-utc.jpg"));
+    background-position: top;
+}
+
+// Knowledge section ****
+.knowledge__section {
+    background-color: $orange1;
+    padding: 120px 0;
+
+    h4 {
+        margin: 60px 0 30px;
+    }
+}
+
+// Volunteer section***
+.form__description {
+    font-size: 14px;
+    line-height: 20px;
+    color: $gray3;
+    margin-top: 30px;
+}
+.volunteer__form {
+    .label {
+        font-family: "Archivo Narrow";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: $dark;
+        margin-bottom: 5px;
+    }
+
+    .btn {
+        width: 100%;
+        &:hover {
+            color: $orange1;
+        }
+    }
+}
+
+// carousel***
+.team__section__btn {
+    display: flex;
+    gap: 25px;
+    button {
+        height: 78px;
+        width: 78px;
+        cursor: pointer;
+        text-align: center;
+        background-color: $orange1;
+        color: $white;
+        border: none;
+    }
+    .btn__disabled {
+        cursor: not-allowed;
+        background-color: $light;
+        color: $orange1;
+    }
+}
+.team__section {
+    max-width: 1920px;
+    position: relative;
+    .carousel {
+        font-size: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        scroll-behavior: smooth;
+    }
+    .ui-card {
+        display: inline-block;
+        width: calc(100% / 3.9);
+        height: 445px;
+        margin-left: 32px;
+        background: radial-gradient(#111 50%, #000 100%);
+        overflow: hidden;
+        position: relative;
+    }
+    .team__section__name {
+        position: absolute;
+        bottom: 20px;
+        left: 30px;
+        opacity: 0;
+        transition: all 0.5s ease-out;
+        h6 {
+            color: $orange1;
+            text-transform: none;
+        }
+        h5 {
+            color: $white;
+        }
+    }
+    .carousel img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .ui-card img {
+        transition: all 0.3s ease-out;
+    }
+    .carousel div:first-child {
+        margin-left: 0;
+    }
+    .ui-card:hover img {
+        opacity: 0.4;
+    }
+    .ui-card:hover .team__section__name {
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 900px) {
+    .team__section {
+        .ui-card {
+            width: calc(100% / 2);
+        }
+    }
+}
+@media screen and (max-width: 550px) {
+    .team__section {
+        .ui-card {
+            width: 100%;
+        }
+    }
+}
+
+// Accordion***
+.accordion__section {
+    .bg {
+        background-color: $blue;
+        color: $white;
+        h4 {
+            color: $white;
+        }
+    }
+    .colorText {
+        color: $orange1;
+        h5 {
+            color: $orange1;
+        }
+    }
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: all 0.2s linear;
+    }
+    i {
+        font-size: 42px;
+        line-height: 42px;
+    }
+
+    .description {
+        height: 0;
+        margin: 0 auto;
+        color: $gray2;
+        transition: all 0.2s linear;
+    }
+}
+@media screen and (max-width: 768px) {
+    .accordion__section {
+        i {
+            font-size: 22px;
+            line-height: 22px;
+        }
+    }
+}
+
+// Statistics info section***
+.statistics__info__block {
+    padding-top: 71px;
+    padding-bottom: 71px;
+    h6 {
+        color: $gray2;
+        text-transform: none;
+    }
+}
+
+// Volunteer section****
+.volunteer__section__box-one {
+    .volunteer__section__img {
+        margin-top: 60px;
+    }
+}
+.volunteer__section__box-two {
+    .volunteer__section__img {
+        margin-bottom: 40px;
+    }
+    h5 {
+        margin-bottom: 10px;
+    }
+}
+
+// At events section***
+.at__events__section {
+    h6 {
+        color: $orange1;
+        margin-top: 23px;
+    }
+    h5 {
+        margin: 12px 0;
+    }
+}
+
+// Latest News section***
+.latest__ews__section-right__block {
+    .box {
+        position: relative;
+    }
+    .category {
+        position: absolute;
+        left: 0;
+    }
+    h6 {
+        color: $gray3;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    h5 {
+        margin: 15px 0 53px;
+        min-width: 264px;
+    }
+}
+
+// Statistics section***
+.statistics__section__number {
+    background-color: $blue;
+    padding: 71px 0;
+}
+
+//  Our mission about***
+.our__mission__about {
+    @include bg-img(url("/image/fon/grateful-candidate-holding-hand-on-chest-while-sta-2023-01-30-23-53-46-utc2.png"));
+    background-position: left;
+    background-size: contain;
+
+    .row {
+        height: 670px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .our__mission__about {
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+// Footer***
+.footer__bg {
+    .hr {
+        @include hr($gray2);
+    }
+    .footer__content {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 34px;
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+    .footer__contact {
+        color: $light;
+    }
+    .footer__footer {
+        font-size: 15px;
+        color: $light;
+        margin: 30px 0;
+    }
+}
+.footer__contact__icon {
+    min-width: 170px;
+}
+
+// Media
+@media screen and (max-width: 1200px) {
+    h1 {
+        font-size: 60px;
+        line-height: 65px;
+    }
+    h2 {
+        font-size: 45px;
+        line-height: 46px;
+    }
+    h4 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+    h5 {
+        font-size: 24px;
+        line-height: 28px;
+        margin: 10px 0;
+    }
+    h6 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .statistics__section {
+        font-size: 67px;
+        line-height: 70px;
+    }
+}
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 50px;
+        line-height: 55px;
+    }
+    h2 {
+        font-size: 35px;
+        line-height: 36px;
+    }
+    h4 {
+        font-size: 23px;
+        line-height: 31px;
+    }
+    h5 {
+        font-size: 18px;
+        line-height: 20px;
+        margin: 10px 0;
+    }
+    h6 {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    p {
+        font-size: 12px;
+        line-height: 17px;
+    }
+    .number__section__statistics {
+        font-size: 37px;
+        line-height: 40px;
+    }
+}

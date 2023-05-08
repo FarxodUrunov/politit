@@ -1,0 +1,90 @@
+// Morph 5.2.2
+// Bootswatch
+
+$theme: "morph" !default;
+
+//
+// Color system
+//
+$orange1: #ff5c31 !default;
+$dark: #1d1d1d !default;
+$blue: #0029e8 !default;
+$light: #f9f9f9 !default;
+$gray1: #d7d7d7 !default;
+$gray2: #444444 !default;
+$gray3: #979797 !default;
+$white: #fff !default;
+//
+
+@mixin button() {
+    min-width: 200px;
+    height: 50px;
+    text-transform: uppercase;
+    border-radius: 0;
+    font-size: 18px;
+    white-space: nowrap;
+    padding: 0 50px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+@mixin days-hms($bgColor: $dark) {
+    max-width: 375px;
+    background-color: $bgColor;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 24px 10px 18px;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 36px;
+    color: $white;
+}
+
+@mixin bg-img($url, $height: auto) {
+    height: $height;
+    background-image: $url;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin line-before($color: $gray2) {
+    display: inline-block;
+    min-width: 78px;
+    height: 1px;
+    background-color: $color;
+}
+@mixin hr($color: $gray1) {
+    display: block;
+    height: 1px;
+    background-color: $color;
+}
+
+@mixin statistics($textColor: $white, $lineAndDesColor: $light, $size: 67px, $height: 70px) {
+    font-weight: 700;
+    font-size: $size;
+    line-height: $height;
+    text-transform: uppercase;
+    color: $textColor;
+    strong {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+    span {
+        @include line-before($lineAndDesColor);
+    }
+    p {
+        color: $lineAndDesColor;
+        text-transform: none;
+        margin-top: 15px;
+        margin-left: 115px;
+    }
+}
+@mixin rectangle($width: 10px, $height: 10px, $bg: $white, $borderColor: $orange1) {
+    display: inline-block;
+    width: $width;
+    height: $height;
+    background-color: $bg;
+    border: 1px solid $borderColor;
+}
