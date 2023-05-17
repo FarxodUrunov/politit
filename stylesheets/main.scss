@@ -7,12 +7,6 @@
 // Font
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;0,600;0,700;1,400&display=swap");
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Archivo Narrow";
-}
 body {
     max-width: 1920px;
     margin: 0 auto;
@@ -20,6 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: $white;
+    font-family: "Archivo Narrow";
     main {
         flex: 1;
     }
@@ -73,20 +68,41 @@ p {
     line-height: 23px;
     color: $gray2;
 }
+a {
+    text-decoration: none;
+    color: $dark;
+    &:hover {
+        color: $orange1;
+    }
+}
 
 // Optional class
-.header__content__space {
+.team-person__card {
+    background: radial-gradient(#111 50%, #000 100%);
+    overflow: hidden;
+    img {
+        width: 100%;
+        transition: all 0.3s ease-out;
+    }
+    &:hover img {
+        opacity: 0.6;
+    }
+}
+.header-space__content {
     margin: 71px auto;
 }
 .social__network {
-    display: inline-block;
-    border: 1px solid $orange1;
     border-radius: 50%;
-    padding: 12px 15px;
+    transition: all 0.2s linear;
+    &:hover {
+        border-radius: 50%;
+        // transform: scale(1.1);
+        box-shadow: 0px 1px 5px 2px $gray3;
+    }
 }
-.your__opinion__box {
+.your-box__opinion {
     padding: 30px;
-    background-image: url("/image/fon/Background.jpg");
+    background-image: url("../image/fon/Background.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -101,7 +117,7 @@ p {
         color: $orange1;
     }
 }
-.btn__bg__blue {
+.btn-bg__blue {
     @include button;
     color: $white;
     background-color: $blue;
@@ -134,6 +150,11 @@ p {
     align-items: center;
     gap: 8px;
     background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    &:hover {
+        color: $blue;
+    }
 }
 .search__btn {
     background-color: $blue;
@@ -149,7 +170,7 @@ p {
     line-height: 34px;
     text-transform: uppercase;
     color: $dark;
-    height: 50px;
+    min-height: 50px;
     min-width: 65px;
     padding: 0 20px;
     border: 1px solid $gray1;
@@ -167,6 +188,26 @@ p {
         color: $gray3;
     }
 }
+.btn__play {
+    background-color: transparent;
+    border: none;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all 0.3s linear;
+}
+.contact__btn {
+    transition: all 0.2s linear;
+    &:hover {
+        color: $orange1;
+    }
+}
+
+.height__section {
+    height: 882px;
+}
 .category {
     color: $white;
     background-color: $blue;
@@ -181,10 +222,10 @@ p {
 .hr {
     @include hr;
 }
-.days__hms__dark {
+.days-hms__dark {
     @include days-hms;
 }
-.days__hms__blue {
+.days-hms__blue {
     @include days-hms($blue);
 }
 .description__subtitle {
@@ -198,7 +239,7 @@ p {
     width: 100%;
     padding: 12px 16px;
     border: 1px solid $gray1;
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     outline-color: $blue;
 }
 .subtitle {
@@ -225,7 +266,7 @@ p {
         color: $blue;
     }
 }
-.line-before__text__orange {
+.line-before__text-orange {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -257,7 +298,7 @@ p {
         margin-top: 20px;
     }
 }
-.line-before__description__white {
+.line-before__description {
     display: flex;
     gap: 32px;
     .line {
@@ -278,7 +319,7 @@ p {
     background-color: $light;
     border: 1px solid $gray1;
 }
-.number__section__statistics {
+.number-section__statistics {
     @include statistics;
     min-width: 270px;
 }
@@ -289,20 +330,33 @@ p {
 
     .nav-link {
         color: $white;
+        background-color: transparent;
+        border: none;
         font-style: normal;
         font-weight: 700;
         font-size: 18px;
         line-height: 22px;
         text-transform: uppercase;
         &:hover {
+            color: $orange1;
             border-bottom: 2px solid $white;
             padding-bottom: 6px;
         }
         &:focus {
-            color: $white;
+            color: $orange1;
             border-bottom: 2px solid $white;
             padding-bottom: 6px;
         }
+    }
+    .plus__sign {
+        color: $white;
+    }
+    .dropdown-menu {
+        position: absolute;
+        left: 80px;
+    }
+    .dropdown-item:hover {
+        color: $orange1;
     }
 }
 .navbar__dark {
@@ -326,14 +380,22 @@ p {
             color: $blue;
         }
     }
+    .plus__sign {
+        color: $blue;
+    }
 }
 
 // SECTION
 
+// 404 page
+.error__page {
+    @include bg-img(url("../image/404/Background404.png"));
+}
+
 // Home 1 page header***
-.background__img__home-1 {
+.home1-background__img {
     @include bg-img(
-        url("/image//fon/passionate-mature-man-giving-speech-at-podium-2021-09-24-04-13-57-utc.jpg"),
+        url("../image/fon/passionate-mature-man-giving-speech-at-podium-2021-09-24-04-13-57-utc.jpg"),
         100vh
     );
     .hr {
@@ -354,8 +416,8 @@ p {
 }
 
 // Home 2 page header
-.background__img__home-2 {
-    @include bg-img(url("/image/fon/home-2.jpg"), 100vh);
+.home2-background__img {
+    @include bg-img(url("../image/fon/home-2.jpg"), 100vh);
     .search__btn {
         background-color: $white;
         color: $blue;
@@ -415,7 +477,7 @@ p {
 }
 
 // Single post info page***
-.single__post__info {
+.single-post__info {
     max-width: 860px;
     padding: 0 12px;
     margin: 50px auto 120px;
@@ -466,14 +528,16 @@ p {
         line-height: 20px;
         color: $gray2;
         text-transform: none;
+        background-color: transparent;
         &:hover {
+            background-color: $blue;
             color: $white;
         }
     }
 }
 
 // Latest News section***
-.latest__news__section__box {
+.news-box__section {
     max-width: 408px;
     position: relative;
     .category {
@@ -485,26 +549,33 @@ p {
         @include rectangle(5px, 5px);
     }
 }
+.news__title {
+    color: $dark;
+    transition: all 0.2s linear;
+    &:hover {
+        color: $orange1;
+    }
+}
 
 // Social Sciences section***
-.social__sciences__section__bg {
-    @include bg-img(url("/image/fon/social.png"));
+.social-bg__section {
+    @include bg-img(url("../image/fon/social.png"));
     padding: 144px 0;
 }
 
 // Welcome Event section***
-.welcome__event__section {
-    @include bg-img(url("/image/fon/welcome.jpg"));
+.welcome-event__section {
+    @include bg-img(url("../image/fon/welcome.jpg"));
     padding: 360px 30px 30px 0;
 }
-.welcome__event__section__details {
+.welcome-event__section-details {
     h6 {
         width: 110px;
     }
 }
 
 // Agenda And Schedule section***
-.agend__and__schedule__section__bg-box {
+.agenda__section {
     background-color: $orange1;
     h5 {
         color: $white;
@@ -512,16 +583,16 @@ p {
         line-height: 34px;
     }
 }
-.agend__and__schedule__section-color-gray {
+.agenda__section-color {
     color: $gray3;
 }
 
 // Conference on Future***
-.conference__future__bg {
-    @include bg-img(url("/image/fon/conference.jpg"));
+.conference__future {
+    @include bg-img(url("../image/fon/conference.jpg"));
     padding: 144px 0;
 }
-.conference__future__button {
+.conference-space__future {
     margin: 60px auto 120px;
 }
 
@@ -530,28 +601,34 @@ p {
     h6 {
         color: $orange1;
     }
-}
-.events__section__active {
-    background-color: $blue;
-    h6 {
-        color: $light;
-    }
-    h5 {
-        color: $white;
-    }
-    p {
-        color: $light;
-    }
     .line {
-        background-color: $light;
+        background-color: $gray1;
     }
-    .btn {
-        background-color: $orange1;
-        color: $white;
-        &:hover {
-            background-color: $white;
-            border-color: $orange1;
-            color: $orange1;
+}
+.events-section {
+    transition: all 0.3s linear;
+    &:hover {
+        background-color: $blue;
+        h6 {
+            color: $light;
+        }
+        h5 {
+            color: $white;
+        }
+        p {
+            color: $light;
+        }
+        .line {
+            background-color: $light;
+        }
+        .btn__blue {
+            background-color: $orange1;
+            color: $white;
+            &:hover {
+                background-color: $white;
+                border-color: $orange1;
+                color: $orange1;
+            }
         }
     }
 }
@@ -566,13 +643,30 @@ p {
         position: relative;
     }
     .span {
-        @include rectangle;
         position: absolute;
-        top: -5px;
+        top: -13px;
     }
-    h5 {
+    .radio {
+        appearance: none;
+    }
+    .radio::after {
+        content: "";
+        @include rectangle;
+    }
+    .radio:checked::after {
+        background-color: $orange1;
+    }
+    label {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: $dark;
+        cursor: pointer;
         position: absolute;
-        top: -60px;
+        top: -30px;
+        left: 0;
+        margin: 0;
     }
     .year__2000 {
         left: 10%;
@@ -585,13 +679,15 @@ p {
     }
     .year__2015 {
         left: 60%;
-        background-color: $orange1;
     }
     .year__2022 {
         left: 77%;
     }
+    // .bg__select {
+    //     background-color: $orange1;
+    // }
 }
-.more__about__section__block {
+.more-section__block {
     margin: 60px 0 0;
 
     .rectangle {
@@ -599,20 +695,15 @@ p {
     }
 }
 
-// About Mayke section***
-.about__mayke__section {
-    height: 882px;
-}
-
 // Plan public safety***
-.plan__public__safety {
+.plan-public__safety {
     li h6 {
         text-transform: none;
     }
 }
 
 // Team person section***
-.team__person__section {
+.team-person__section {
     p {
         margin: 30px 0 10px;
         color: $orange1;
@@ -620,9 +711,15 @@ p {
 }
 
 // Our mission***
-.our__section__bg {
+.our__mission {
+    height: 915px;
+    .our__mission-block {
+        max-width: 630px;
+    }
+}
+.our-bg__section {
     min-height: 800px;
-    @include bg-img(url("/image/fon/grateful-candidate-holding-hand-on-chest-while-sta-2023-01-30-23-53-46-utc.jpg"));
+    @include bg-img(url("../image/fon/grateful-candidate-holding-hand-on-chest-while-sta-2023-01-30-23-53-46-utc.jpg"));
     background-position: top;
 }
 
@@ -633,6 +730,14 @@ p {
 
     h4 {
         margin: 60px 0 30px;
+    }
+    .h6 {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: uppercase;
+        color: $gray3;
+        margin: 0;
     }
 }
 
@@ -664,7 +769,7 @@ p {
 }
 
 // carousel***
-.team__section__btn {
+.team-btn__section {
     display: flex;
     gap: 25px;
     button {
@@ -700,7 +805,7 @@ p {
         overflow: hidden;
         position: relative;
     }
-    .team__section__name {
+    .team-name__section {
         position: absolute;
         bottom: 20px;
         left: 30px;
@@ -729,7 +834,7 @@ p {
     .ui-card:hover img {
         opacity: 0.4;
     }
-    .ui-card:hover .team__section__name {
+    .ui-card:hover .team-name__section {
         opacity: 1;
     }
 }
@@ -792,7 +897,7 @@ p {
 }
 
 // Statistics info section***
-.statistics__info__block {
+.statistics__info {
     padding-top: 71px;
     padding-bottom: 71px;
     h6 {
@@ -802,13 +907,13 @@ p {
 }
 
 // Volunteer section****
-.volunteer__section__box-one {
-    .volunteer__section__img {
+.volunteer__box-one {
+    .volunteer__img {
         margin-top: 60px;
     }
 }
-.volunteer__section__box-two {
-    .volunteer__section__img {
+.volunteer__box-two {
+    .volunteer__img {
         margin-bottom: 40px;
     }
     h5 {
@@ -817,7 +922,7 @@ p {
 }
 
 // At events section***
-.at__events__section {
+.at-events__section {
     h6 {
         color: $orange1;
         margin-top: 23px;
@@ -828,7 +933,7 @@ p {
 }
 
 // Latest News section***
-.latest__ews__section-right__block {
+.latest__politit-news {
     .box {
         position: relative;
     }
@@ -849,14 +954,16 @@ p {
 }
 
 // Statistics section***
-.statistics__section__number {
+.statistics-bg__section {
     background-color: $blue;
     padding: 71px 0;
 }
 
 //  Our mission about***
-.our__mission__about {
-    @include bg-img(url("/image/fon/grateful-candidate-holding-hand-on-chest-while-sta-2023-01-30-23-53-46-utc2.png"));
+.our__mission {
+    @include bg-img(
+        url("../image/fon/grateful-candidate-holding-hand-on-chest-while-sta-2023-01-30-23-53-46-utc2.png")
+    );
     background-position: left;
     background-size: contain;
 
@@ -864,10 +971,29 @@ p {
         height: 670px;
     }
 }
+.progress {
+    height: 10px;
+}
+.progress-89 {
+    width: 89%;
+}
+.progress-95 {
+    width: 95%;
+}
+.progress-96 {
+    width: 96%;
+}
 @media screen and (max-width: 1200px) {
-    .our__mission__about {
+    .our__mission {
         background-position: center;
         background-size: cover;
+    }
+}
+
+// My experience section
+.my__experience {
+    .line {
+        background-color: $orange1;
     }
 }
 
@@ -885,6 +1011,10 @@ p {
     }
     .footer__contact {
         color: $light;
+        transition: all 0.2s linear;
+        &:hover {
+            color: $orange1;
+        }
     }
     .footer__footer {
         font-size: 15px;
@@ -892,11 +1022,23 @@ p {
         margin: 30px 0;
     }
 }
-.footer__contact__icon {
+.footer__contact-icon {
     min-width: 170px;
 }
 
 // Media
+@media screen and (max-width: 1400px) {
+    .navbar {
+        .nav-link {
+            font-size: 16px;
+        }
+    }
+    .btn__outline {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     h1 {
         font-size: 60px;
@@ -923,9 +1065,24 @@ p {
         font-size: 14px;
         line-height: 20px;
     }
+    .navbar {
+        .nav-link {
+            font-size: 14px;
+        }
+    }
     .statistics__section {
         font-size: 67px;
         line-height: 70px;
+    }
+    .knowledge__section {
+        .h6 {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+    .btn__outline {
+        font-size: 18px;
+        line-height: 26px;
     }
 }
 @media screen and (max-width: 768px) {
@@ -954,8 +1111,125 @@ p {
         font-size: 12px;
         line-height: 17px;
     }
-    .number__section__statistics {
+    .number-section__statistics {
         font-size: 37px;
         line-height: 40px;
+    }
+    .knowledge__section {
+        .h6 {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+}
+
+// Calendar
+
+.calendar {
+    width: 21rem;
+    background-color: transparent;
+    border: 1px solid $gray1;
+
+    .btn__text {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: $gray3;
+    }
+}
+
+.month {
+    width: 100%;
+    background-color: transparent;
+}
+
+.month i {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.month h6 {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $dark;
+}
+
+.weekdays {
+    width: 100%;
+    height: 2.6rem;
+    display: flex;
+    align-items: center;
+}
+
+.weekdays div {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #1d1d1d;
+    width: calc(20.2rem / 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.2rem;
+    color: $gray2;
+}
+
+.days div {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+    width: calc(19.9rem / 7);
+    height: 2.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.days div:hover:not(.today) {
+    background-color: $blue;
+    color: $white;
+    cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+    opacity: 0;
+}
+
+.today {
+    background-color: $blue;
+    color: $white;
+}
+
+@media screen and (max-width: 1200px) {
+    .calendar {
+        transform: scaleX(0.8);
+        translate: -40px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .calendar {
+        transform: scaleX(1);
+        translate: 0px;
+    }
+}
+@media screen and (max-width: 381px) {
+    .calendar {
+        transform: scaleX(0.7);
+        translate: -50px;
     }
 }

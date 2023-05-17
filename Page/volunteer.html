@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/dist/main.css" />
+    <link rel="stylesheet" href="../dist/main.css">
     <title>Campaign</title>
 </head>
 
@@ -14,20 +14,8 @@
     <header class="navbar__white bg-light">
         <nav class="navbar navbar-expand-lg mt-5">
             <div class="container">
-                <a class="navbar-brand" href="/index.html">
-                    <svg width="145" height="32" viewBox="0 0 145 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M0 15V32H5.83893V19.9796H11.1761C13.1528 19.9796 14.871 19.5804 16.3308 18.7821C17.7905 17.9837 18.9309 16.854 19.752 15.3929C20.5731 13.9317 20.9837 12.2371 20.9837 10.309C20.9837 8.50146 20.6187 6.89723 19.8889 5.49636C19.159 4.09548 18.0642 2.99587 16.6045 2.19752C15.1447 1.39917 13.3353 1 11.1761 1H0V6H5.99533H10.6717C12.0506 6 13.1148 6.3886 13.8642 7.1658C14.6136 7.94301 14.9883 8.98446 14.9883 10.2902C14.9883 11.7513 14.6211 12.9016 13.8867 13.7409C13.1523 14.5803 12.0806 15 10.6717 15H5.99533H0Z"
-                            fill="#FF5C31" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M28.4444 28.0789C30.7537 30.693 33.9291 32 37.9704 32C42.0117 32 45.187 30.693 47.4963 28.0789C49.8056 25.4648 50.9602 21.4385 50.9602 16C50.9602 10.5315 49.8056 6.49765 47.4963 3.89859C45.187 1.29953 42.0117 0 37.9704 0C33.9291 0 30.7537 1.29953 28.4444 3.89859C26.1351 6.49765 24.9805 10.5315 24.9805 16C24.9805 21.4385 26.1351 25.4648 28.4444 28.0789ZM43.2277 24.3735C42.0696 26.1245 40.3171 27 37.9704 27C35.6541 27 33.9092 26.1245 32.7359 24.3735C31.5625 22.6224 30.9758 20.2054 30.9758 17.1224V14.8776C30.9758 11.7946 31.5625 9.37755 32.7359 7.62653C33.9092 5.87551 35.6541 5 37.9704 5C40.3171 5 42.0696 5.87551 43.2277 7.62653C44.3858 9.37755 44.9649 11.7946 44.9649 14.8776V17.1224C44.9649 20.2054 44.3858 22.6224 43.2277 24.3735Z"
-                            fill="#FF5C31" />
-                        <path d="M55.9565 32V1H61.7702V26.5773H74.9418V32H55.9565Z" fill="#FF5C31" />
-                        <path d="M78.9385 32V1H84.9338V32H78.9385Z" fill="#FF5C31" />
-                        <path d="M96.5529 32V6.1516H88.9307V1H109.914V6.1516H102.292V32H96.5529Z" fill="#FF5C31" />
-                        <path d="M113.911 32V1H119.906V32H113.911Z" fill="#FF5C31" />
-                        <path d="M131.526 32V6.1516H123.903V1H144.887V6.1516H137.265V32H131.526Z" fill="#FF5C31" />
-                    </svg>
+                <a class="navbar-brand" href="../index.html">
+                    <img class="img-fluid" src="../image/svg/Politit.svg" alt="logo-white">
                 </a>
                 <button class="navbar-toggler rounded-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -37,43 +25,83 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <div class='w-100 d-flex justify-content-lg-center'>
                         <ul class="navbar-nav mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link px-0 me-4 me-xl-5 mt-4 mt-lg-0" href="/index.html">Home</a>
+                            <li class="nav-item mt-4 mt-lg-0">
+                                <div class="btn-group me-4 me-xl-5 d-flex align-items-center">
+                                    <button type="button" class="nav-link px-0" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Home <span class="plus__sign">+</span>
+                                    </button>
+                                    <ul class="dropdown-menu rounded-0">
+                                        <li><a class="dropdown-item" href="../index.html">Home 1</a></li>
+                                        <li><a class="dropdown-item" href="home/home-2-compaign.html">Home 2</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="home/home-3-cyti-mayor.html">Home 3</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="contacts.html">Contacts</a></li>
+                                        <li><a class="dropdown-item" href="faq.html">Faq</a></li>
+                                        <li><a class="dropdown-item" href="volunteer.html">Volunteer</a></li>
+                                    </ul>
+                                </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link px-0 me-4 me-xl-5" href="#">About <span>+</span></a>
+                                <a class="nav-link px-0 me-4 me-xl-5 mt-0 mt-lg-0" href="about.html">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link px-0 me-4 me-xl-5" href="/Page/issue/issues-1.html">Issues
-                                    <span>+</span></a>
+                                <div class="btn-group me-4 me-xl-5 d-flex align-items-center">
+                                    <button class="nav-link px-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Issues <span class="plus__sign">+</span>
+                                    </button>
+                                    <ul class="dropdown-menu rounded-0">
+                                        <li><a class="dropdown-item" href="issue/issues-1.html">Issues 1</a></li>
+                                        <li><a class="dropdown-item" href="issue/issues-2.html">Issues 2</a></li>
+                                        <li>
+                                            <a class="dropdown-item" href="issue/issue-detail.html">
+                                                Issues detail
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link px-0 me-4 me-xl-5" href="/Page/blog-post/blog.html">Blog
-                                    <span>+</span></a>
+                                <div class="btn-group me-4 me-xl-5 d-flex align-items-center">
+                                    <button class="nav-link px-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Blog <span class="plus__sign">+</span>
+                                    </button>
+                                    <ul class="dropdown-menu rounded-0">
+                                        <li><a class="dropdown-item" href="blog-post/blog.html">Blog</a></li>
+                                        <li><a class="dropdown-item" href="blog-post/single-post.html">Blog
+                                                post</a></li>
+                                    </ul>
+                                </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link px-0 me-4 me-xl-5" href="/Page/team/team.html">Team</a>
+                                <div class="btn-group me-4 me-xl-5 d-flex align-items-center">
+                                    <button class="nav-link px-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Team <span class="plus__sign">+</span>
+                                    </button>
+                                    <ul class="dropdown-menu rounded-0">
+                                        <li><a class="dropdown-item" href="team/team.html">Team</a></li>
+                                        <li><a class="dropdown-item" href="team/single-team.html">Single team</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
                     </div>
-                    <div class="d-flex gap-3">
-                        <input class="input d-block d-lg-none" name="search" placeholder="Search" />
-                        <button type="submit" class="search__btn d-none d-lg-block">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
-                                class="bi bi-search" viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                            </svg>
-                        </button>
-                        <button class="btn__orange" type="submit">
-                            join now
+                    <div class="d-flex gap-0">
+                        <input id="search__input" class="input d-block d-lg-none" name="search" placeholder="Search">
+                        <button id="search__btn" type="submit" class="search__btn">
+                            <i class="bi bi-search"></i>
                         </button>
                     </div>
+                    <button class="btn__orange mt-4 mt-lg-0" type="submit">
+                        join now
+                    </button>
                 </div>
             </div>
         </nav>
         <span class="hr"></span>
-        <div class="container header__content__space">
+        <div class="container header-space__content">
             <div class="row gap-4 justify-content-center align-items-center text-center text-md-start">
                 <h1 class="col-12 col-md-6">
                     Volunteer
@@ -81,9 +109,9 @@
                 <div class="col breadcrumbs justify-content-center">
                     <span class="line d-none d-md-block"></span>
                     <div>
-                        <strong>Home /<b> Volunteer</b></strong>
+                        <strong><a href="../index.html">Home</a> /<b> Volunteer</b></strong>
                         <p>
-                            Pulvinar etiam non quam lacus. Tristique risus <br />nec feugiat in fermentum posuere
+                            Pulvinar etiam non quam lacus. Tristique risus <br>nec feugiat in fermentum posuere
                         </p>
                     </div>
                 </div>
@@ -96,10 +124,10 @@
         <section class="section container">
             <div class="row gap-5 align-items-center">
                 <div class="col-12 col-lg-6 order-last order-lg-first">
-                    <h2>Together we will<br /> achieve change</h2>
-                    <div class="line-before__description__white">
+                    <h2>Together we will<br> achieve change</h2>
+                    <div class="line-before__description">
                         <span class="line d-none d-md-block"></span>
-                        <div>
+                        <div class="plan-public__safety">
                             <p>
                                 Morbi tincidunt augue interdum velit euismod in pellentesque massa. Phasellus faucibus
                                 scelerisque vulputate sapien
@@ -107,37 +135,19 @@
 
                             <ul class="list-unstyled d-flex flex-column gap-3">
                                 <li class="d-flex align-items-center gap-3">
-                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="16" cy="16" r="15" stroke="#979797" />
-                                        <path
-                                            d="M13.7368 21L9 16.4452L9.78947 15.9231L13.7368 19.3077L23.2105 10L24 10.8462L13.7368 21Z"
-                                            fill="#979797" />
-                                    </svg>
+                                    <img class="img-fluid" src="../image/svg/check.svg" alt="check">
                                     <h6>
                                         Euismod lacinia at quis risus
                                     </h6>
                                 </li>
                                 <li class="d-flex align-items-center gap-3">
-                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="16" cy="16" r="15" stroke="#979797" />
-                                        <path
-                                            d="M13.7368 21L9 16.4452L9.78947 15.9231L13.7368 19.3077L23.2105 10L24 10.8462L13.7368 21Z"
-                                            fill="#979797" />
-                                    </svg>
+                                    <img class="img-fluid" src="../image/svg/check.svg" alt="check">
                                     <h6>
                                         Proin nibh nisl condimentum id venenatis
                                     </h6>
                                 </li>
                                 <li class="d-flex align-items-center gap-3">
-                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="16" cy="16" r="15" stroke="#979797" />
-                                        <path
-                                            d="M13.7368 21L9 16.4452L9.78947 15.9231L13.7368 19.3077L23.2105 10L24 10.8462L13.7368 21Z"
-                                            fill="#979797" />
-                                    </svg>
+                                    <img class="img-fluid" src="../image/svg/check.svg" alt="check">
                                     <h6>
                                         Phasellus egestas tellus rutrum tellus
                                     </h6>
@@ -148,25 +158,71 @@
                     </div>
                 </div>
                 <div class="col">
-                    <img class="img-fluid" style="transform: scaleX(-1)"
-                        src="/image/card-img/group-of-diverse-voters-showing-ballots-2022-12-16-00-08-53-utc.jpg"
-                        alt="card photo" />
+                    <img class="img-fluid" src="../image/card-img/together.jpg" alt="card photo">
                 </div>
             </div>
         </section>
         <!-- Contact and photo section -->
 
         <!-- About Mayke section -->
-        <section class="about__mayke__section section section-padding bg-light overflow-hidden position-relative">
+        <section class="height__section section section-padding bg-light overflow-hidden position-relative">
             <div class="container">
-                <h2>Your support will help us <br />continue our mission</h2>
+                <h2>Your support will help us <br>continue our mission</h2>
                 <div class="d-flex gap-5 position-absolute end-0">
-                    <img class="img-fluid"
-                        src="/image/card-img/photo-realistic-digital-collage-of-successful-amer-2022-09-29-18-12-04-utc.png"
-                        alt="card photo" />
-                    <img class="img-fluid"
-                        src="/image/card-img/photo-realistic-digital-collage-of-successful-amer-2022-09-29-18-12-04-utc copy.png"
-                        alt="card photo" />
+                    <div>
+                        <div class="position-relative">
+                            <img class="img-fluid"
+                                src="../image/vedio-img/senior-woman-smiling-on-camera-after-workout-sport-2022-07-12-06-19-11-utc.png"
+                                alt="card photo">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                class="btn__play">
+                                <img class="img-fluid" src="../image/svg/Button-Play.svg" alt="play">
+                            </button>
+                        </div>
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog  modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <video class="video__play w-100" preload="metadata" src="../vedio/lar.mp4"
+                                            controls>
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="position-relative">
+                            <img class="img-fluid"
+                                src="../image/vedio-img/young-business-man-using-mobile-phone-outdoors-in-2021-09-02-11-58-59-utc.png"
+                                alt="card photo">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                class="btn__play">
+                                <img class="img-fluid" src="../image/svg/Button-Play.svg" alt="play">
+                            </button>
+                        </div>
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog  modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <video class="video__play w-100" preload="metadata" src="../vedio/lar.mp4"
+                                            controls>
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -174,43 +230,46 @@
 
         <!-- Become volunteer section -->
         <section class="section container">
-            <div class="line-before__text__orange justify-content-center justify-content-xl-start">
+            <div class="line-before__text-orange justify-content-center justify-content-xl-start">
                 <span></span>
                 <h6>BECOME A VOLUNTEER</h6>
             </div>
-            <h2 class="text-center text-xl-start">YES, I SUPPORT<br /> Politit</h2>
+            <h2 class="text-center text-xl-start">YES, I SUPPORT<br> Politit</h2>
             <div class="row gap-4">
                 <div class="col-12 col-xl-6 text-center text-xl-start">
-                    <img src="/image/card-img/support.jpg" alt="card photo" class="img-fluid" />
+                    <img src="../image/card-img/support.jpg" alt="card photo" class="img-fluid">
                 </div>
                 <div class="col">
                     <form class="row volunteer__form">
                         <div class="col-12 col-sm-6">
                             <label for="first-name" class="label">First name</label>
-                            <input type="text" class="input" id="first-name" value="" placeholder="First Name" required>
+                            <input type="text" class="input mb-4" id="first-name" value="" placeholder="First Name"
+                                required>
                         </div>
                         <div class="col">
                             <label for="last-name" class="label">Last name</label>
-                            <input type="text" class="input" id="last-name" value="" placeholder="Last Name" required>
+                            <input type="text" class="input mb-4" id="last-name" value="" placeholder="Last Name"
+                                required>
                         </div>
                         <div class="col-12 col-sm-6">
                             <label for="email" class="label">Email</label>
-                            <input type="email" class="input" id="email" value="" placeholder="Email Address" required>
+                            <input type="email" class="input mb-4" id="email" value="" placeholder="Email Address"
+                                required>
                         </div>
                         <div class="col">
                             <label for="phone-number" class="label">Phone Number</label>
-                            <input type="number" class="input" id="phone-number" value="" placeholder="Phone Number"
-                                required>
+                            <input type="number" class="input mb-4" id="phone-number" value=""
+                                placeholder="Phone Number" required>
                         </div>
                         <div class="col-12">
                             <label for="zip-code" class="label">Zip code</label>
-                            <textarea type="text" class="input" id="zip-code" placeholder="Select Your Zip Code"
-                                value="" rows="1" cols="55" required></textarea>
+                            <textarea class="input mb-4" id="zip-code" placeholder="Select Your Zip Code" rows="1"
+                                cols="55" required></textarea>
                         </div>
                         <div class="col-12">
                             <label for="message" class="label">Message</label>
-                            <textarea type="text" class="input" id="message" placeholder="Message" value="" rows="3"
-                                cols="55" required></textarea>
+                            <textarea class="input mb-4" id="message" placeholder="Message" rows="3" cols="55"
+                                required></textarea>
                         </div>
                         <div class="col-12">
                             <button class="btn__orange w-100" type="submit">join now</button>
@@ -226,59 +285,40 @@
         <div class="container">
             <div
                 class="section-padding d-flex flex-column flex-lg-row justify-content-between align-items-center align-items-lg-baseline gap-5">
-                <span>
-                    <svg width="145" height="32" viewBox="0 0 145 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M0 15V32H5.83893V19.9796H11.1761C13.1528 19.9796 14.871 19.5804 16.3308 18.7821C17.7905 17.9837 18.9309 16.854 19.752 15.3929C20.5731 13.9317 20.9837 12.2371 20.9837 10.309C20.9837 8.50146 20.6187 6.89723 19.8889 5.49636C19.159 4.09548 18.0642 2.99587 16.6045 2.19752C15.1447 1.39917 13.3353 1 11.1761 1H0V6H5.99533H10.6717C12.0506 6 13.1148 6.3886 13.8642 7.1658C14.6136 7.94301 14.9883 8.98446 14.9883 10.2902C14.9883 11.7513 14.6211 12.9016 13.8867 13.7409C13.1523 14.5803 12.0806 15 10.6717 15H5.99533H0Z"
-                            fill="#FF5C31" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M28.4444 28.0789C30.7537 30.693 33.9291 32 37.9704 32C42.0117 32 45.187 30.693 47.4963 28.0789C49.8056 25.4648 50.9602 21.4385 50.9602 16C50.9602 10.5315 49.8056 6.49765 47.4963 3.89859C45.187 1.29953 42.0117 0 37.9704 0C33.9291 0 30.7537 1.29953 28.4444 3.89859C26.1351 6.49765 24.9805 10.5315 24.9805 16C24.9805 21.4385 26.1351 25.4648 28.4444 28.0789ZM43.2277 24.3735C42.0696 26.1245 40.3171 27 37.9704 27C35.6541 27 33.9092 26.1245 32.7359 24.3735C31.5625 22.6224 30.9758 20.2054 30.9758 17.1224V14.8776C30.9758 11.7946 31.5625 9.37755 32.7359 7.62653C33.9092 5.87551 35.6541 5 37.9704 5C40.3171 5 42.0696 5.87551 43.2277 7.62653C44.3858 9.37755 44.9649 11.7946 44.9649 14.8776V17.1224C44.9649 20.2054 44.3858 22.6224 43.2277 24.3735Z"
-                            fill="#FF5C31" />
-                        <path d="M55.9565 32V1H61.7702V26.5773H74.9418V32H55.9565Z" fill="#FF5C31" />
-                        <path d="M78.9385 32V1H84.9338V32H78.9385Z" fill="#FF5C31" />
-                        <path d="M96.5529 32V6.1516H88.9307V1H109.914V6.1516H102.292V32H96.5529Z" fill="#FF5C31" />
-                        <path d="M113.911 32V1H119.906V32H113.911Z" fill="#FF5C31" />
-                        <path d="M131.526 32V6.1516H123.903V1H144.887V6.1516H137.265V32H131.526Z" fill="#FF5C31" />
-                    </svg>
-                </span>
+                <a href="../index.html">
+                    <img class="img-fluid" src="../image/svg/Politit.svg" alt="logo">
+                </a>
                 <div>
                     <h3 class="footer__content text-center text-lg-start">
-                        People directly select who will run the country through<br /> elections, and
+                        People directly select who will run the country through<br> elections, and
                         those
-                        representatives indirectly make<br />
+                        representatives indirectly make<br>
                         decisions chosen by the people
                     </h3>
                     <div
-                        class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-2 gap-lg-5 mt-5">
-                        <div class="d-flex align-items-baseline gap-2 footer__contact__icon">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M9.5 18C9.5 18 3 9.783 3 6.3C3 4.04923 4.23889 1.96943 6.25 0.84404C8.26111 -0.281347 10.7389 -0.281347 12.75 0.84404C14.7611 1.96943 16 4.04923 16 6.3C16 9.783 9.5 18 9.5 18ZM9.5 8.1C10.5257 8.1 11.3571 7.29411 11.3571 6.3C11.3571 5.30589 10.5257 4.5 9.5 4.5C8.47433 4.5 7.64286 5.30589 7.64286 6.3C7.64286 7.29411 8.47433 8.1 9.5 8.1Z"
-                                    fill="#FF5C31" />
-                            </svg>
-                            <p class="footer__contact">34 Ridge Road, London,<br />
-                                40341 United States</p>
-                        </div>
-                        <div class="d-flex align-items-baseline gap-2 footer__contact__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#FF5C31"
-                                class="bi bi-telephone-fill" viewBox="0 0 18 18">
-                                <path fill-rule="evenodd"
-                                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                            </svg>
-                            <p class="footer__contact">+1 9608224266<br />
+                        class="contact__btn d-flex flex-column flex-md-row align-items-center justify-content-between gap-2 gap-lg-5 mt-5">
+                        <a class="d-flex align-items-baseline gap-2 footer__contact-icon" aria-label="Увеличить карту"
+                            target="_blank" jstcache="31"
+                            href="https://maps.google.com/maps?ll=37.995197,-81.112865&amp;z=6&amp;t=m&amp;hl=ru&amp;gl=US&amp;mapclient=embed&amp;q=34%20Ridge%20Rd%20Fayetteville%2C%20WV%2025840%20%D0%A1%D0%A8%D0%90"
+                            jsaction="mouseup:placeCard.largerMap">
+                            <img class="img-fluid" src="../image/svg/Icon-Location.svg" alt="location">
+                            <p class="footer__contact">
+                                34 Ridge Road, London,<br>
+                                40341 United States
+                            </p>
+                        </a>
+                        <a href="tel:+19608224266" class="d-flex align-items-baseline gap-2 footer__contact-icon">
+                            <img class="img-fluid" src="../image/svg/Icon-Call.svg" alt="call">
+                            <p class="footer__contact">+1 9608224266<br>
                                 +1 9608224266
                             </p>
-                        </div>
-                        <div class="d-flex align-items-baseline gap-2 footer__contact__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#FF5C31"
-                                class="bi bi-envelope-open-fill" viewBox="0 0 18 18">
-                                <path
-                                    d="M8.941.435a2 2 0 0 0-1.882 0l-6 3.2A2 2 0 0 0 0 5.4v.314l6.709 3.932L8 8.928l1.291.718L16 5.714V5.4a2 2 0 0 0-1.059-1.765l-6-3.2ZM16 6.873l-5.693 3.337L16 13.372v-6.5Zm-.059 7.611L8 10.072.059 14.484A2 2 0 0 0 2 16h12a2 2 0 0 0 1.941-1.516ZM0 13.373l5.693-3.163L0 6.873v6.5Z" />
-                            </svg>
-                            <p class="footer__contact">politit-template@mail.com <br />
+                        </a>
+                        <a href="mailto:politit-template@mail.com"
+                            class="d-flex align-items-baseline gap-2 footer__contact-icon">
+                            <img class="img-fluid" src="../image/svg/Icon-Envelope.svg" alt="envelope">
+                            <p class="footer__contact">politit-template@mail.com <br>
                                 politit-template@mail.com</p>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -288,10 +328,10 @@
             <p class="footer__footer">Merkulove © Politit Template All rights reserved Copyrights 2023</p>
         </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
+    <script src="../script/index.js"></script>
 </body>
 
 </html>
